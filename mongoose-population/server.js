@@ -59,18 +59,70 @@ app.use(express.json())
 //    result.visitedPlanets.forEach(p => console.log(p.name));
 // })
 
-// SolarSystem
-//     .findOne({})
-//     .populate({
-//         path: "planets",
-//         populate: { path: "visitors" }
-//     })
-//     .exec(function (err, result) {
-//         result.planets.forEach(p => {
-//             console.log(p.name + " visitors: ");
-//             p.visitors.forEach(v => console.log(v.name))
+// const fetchData = async function () {
+//     const result = await SolarSystem
+//         .findOne({})
+//         .populate({
+//             path: "planets",
+//             populate: { path: "visitors" }
 //         })
+//         .exec()
+//        return result
+
+// }
+
+
+// fetchData().then(function (result) {
+//     result.planets.forEach(p => {
+//         console.log(p.name + " visitors: ");
+//         p.visitors.forEach(v => console.log(v.name))
 //     })
+// })
+
+
+
+// const getMixedData = async function () {
+    
+//     const allPlanets = await Planet.find({})
+
+//     const allVistors = await Visitor.find({})
+
+//     const result = {allPlanets,allVistors}
+//     return result
+// }
+
+// getMixedData().then(result => console.log(result))
+
+
+
+// const getOneVisiter = async function (planet) {
+    
+//     const onePlanet = await Planet.findOne({ name:planet})
+//     const firstVisitorID = onePlanet.visitors[0]
+ 
+//     const firstVisitor = await Visitor.findById(firstVisitorID)
+
+    
+//     return firstVisitor
+// }
+
+// getOneVisiter("pluto").then(result => console.log(result))
+
+
+// const visitPlanet= async function(visitorId,planetId){
+
+//     const planet = await Planet.findById(planetId)
+//     const visitor= await Visitor.findById(visitorId)
+//     visitor.visitedPlanets.push(planet)
+//     visitor.save()
+//     planet.save()
+//     planet.visitors.push(visitor)
+
+// console.log('done');
+// }
+
+// visitPlanet("5fc64ace3def8b113de62a1e","5fc64ace3def8b113de62a1c")
+
 
 
 

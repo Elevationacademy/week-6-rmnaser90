@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const planetSchema = new Schema({
     name: String,
-    system: { type: Schema.Types.ObjectId, ref: 'solarSystem' },
+    system: {type: Schema.Types.ObjectId, ref: 'solarSystem'},
     visitors: [{type: Schema.Types.ObjectId, ref:'visitor'}]
 })
 
