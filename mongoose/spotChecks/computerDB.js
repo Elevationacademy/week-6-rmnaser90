@@ -30,8 +30,9 @@ const allComputer = [c1, c2, c3]
 
 // allComputer.forEach(c => c.save())
 
+const findComputerPromise= Computer.find({maker: "Hp"})
 
-Computer.find({maker: "Hp"}, function (err, result) {
+
+findComputerPromise.then(function (result) {
     console.log(result);
-    
 })

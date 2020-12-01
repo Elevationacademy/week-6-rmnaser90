@@ -33,11 +33,20 @@ const hiTech = new Course({
 
 })
 
-hiTech.save()
 
+let p2 = new Person({ firstName: "Shoo", lastName: "Bert", age: 50 })
+let p3 = new Person({ firstName: "Shoob", lastName: "Ert", age: 34 })
+let p4 = new Person({ firstName: "Sh", lastName: "Oobert", age: 10 })
+let p5 = new Person({ firstName: "Shoober", lastName: "T", age: 44 })
 
+// let allTheShooberts = [p2, p3, p4, p5]
+// allTheShooberts.forEach(s => s.save())
 
-// Person.find({}, function (error,result) {
-    
+// Person.findByIdAndUpdate("5fc4d7fc653465e3c49a9465", {age: 70}, function (err, result) {
 //     console.log(result);
 // })
+Person.findById("5fc4d7fc653465e3c49a9465", function (err, result) {
+    result.remove(function (err) {
+        console.log(err);
+    })
+})
