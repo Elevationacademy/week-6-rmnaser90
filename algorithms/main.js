@@ -55,6 +55,18 @@ const reverse = function(str){
     return reversed
   }
   
-  console.log(reverse("dog"));
-  console.log(reverse("race car"));
-  
+//   console.log(reverse("dog"));
+//   console.log(reverse("race car"));
+
+//exrecise 5
+
+const isPalindrome = function (str) {
+    
+    for (let i = 0,j=str.length-1; i < str.length; i++,j--) {
+        if (str[i]!=str[j]) {
+            return false
+        }
+    }
+    return true
+}
+// console.log(isPalindrome("111111rswr111111"))
