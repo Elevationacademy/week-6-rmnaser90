@@ -70,3 +70,21 @@ const isPalindrome = function (str) {
     return true
 }
 // console.log(isPalindrome("111111rswr111111"))
+
+// exercise 6
+
+const encrypt = function (str) {
+    encryptStr = ""
+    for (let i = 0; i < str.length; i++) {
+
+        encryptStr+=String.fromCharCode(str.charCodeAt(i)+1)
+        
+        
+    }
+    return encryptStr
+}
+
+
+console.log(
+    encrypt("abcd")
+);
