@@ -85,6 +85,43 @@ const encrypt = function (str) {
 }
 
 
+// console.log(encrypt("abcd"));
+
+// exercise 7
+
+
+const decrypt = function (str) {
+    decryptStr = ""
+    for (let i = 0; i < str.length; i++) {
+        decryptStr+=String.fromCharCode(str.charCodeAt(i)-1)
+    }
+    return decryptStr
+}
+
+// console.log( decrypt("bcde"));
+
+// exercise 8
+
+const colors = ["red", "indigo", "white", "teal", "yellow"];
+const foods = ["bread", "cheese", "cucumber"];
+
+const jumble = function (arr1, arr2) {
+    let jumbledArr = []
+    const length = arr1.length>arr2.length? arr1.length : arr2.length
+    for (let i = 0; i < length; i++) {
+        if (i<arr1.length) {
+            jumbledArr.push(arr1[i])
+        }
+        if (i<arr2.length) {
+            jumbledArr.push(arr2[i])
+        }
+    }
+    return jumbledArr
+}
 console.log(
-    encrypt("abcd")
+
+    jumble(colors, foods) // could return: ["cheese",teal","cucumber","red","bread","yellow","white","indigo"]
+
 );
+
+
