@@ -33,3 +33,15 @@ const printBackwardStars = function (num) {
 
 // exercise 3
 
+const starSeries = function (num, count) {
+    
+    for (let i = 0; i < count; i++) {
+        printStars(num)
+        printBackwardStars(num-1)
+        
+    }
+}
+
+starSeries(5,3)
+
+
